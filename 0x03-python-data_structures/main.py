@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-multiple_returns = __import__('8-multiple_returns').multiple_returns
-sentence = "At school, I learnt C!"
-str1 = "" 
-length, first = multiple_returns(str1)
-print("Length: {:d} - First character: {}".format(length, first))
+max_integer = __import__('9-max_integer').max_integer
+my_list = [1, 7, 89, -89, 100, 3, 6]
+max_value = max_integer(my_list)
+print("Max: {}".format(max_value))
