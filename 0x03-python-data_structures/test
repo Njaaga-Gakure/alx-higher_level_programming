@@ -1,7 +1,14 @@
 #!/usr/bin/python3
-a = [11, 12, 10]
-max_num = a[0]
-for i in a[1:]:
-    if i > max_num:
-        max_num = i
-print(max_num)
+
+a = [1, 8, 3, 4, 5, 5, 7, 8]
+
+b = a[:]
+
+for i in range(len(b)):
+    if b[i] % 2 == 0:
+        b[i] = True
+    else:
+        b[i] = False
+print(a)
+print(b)
+	
