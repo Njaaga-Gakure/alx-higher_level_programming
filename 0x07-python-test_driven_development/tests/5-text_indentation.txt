@@ -1,0 +1,34 @@
+The text_indentation module
+======================
+
+Usage:
+-----
+    text_indentation prints a text with 2 new lines after each of these characters: '.', '?' and ':'
+
+Importing the module:
+--------------------
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Normal case:
+----------------------------------
+
+    >>> text_indentation("She said: that's what.")
+    She said:
+    <BLANKLINE>
+    that's what.
+    <BLANKLINE>
+
+Passing a non-string argument values:
+--------------------------------
+
+    >>> text_indentation(5)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+    >>> text_indentation({"key": "value"})
+    Traceback (most recent call last):
+    TypeError: text must be a string
+	
+    >>> text_indentation(["string1", "string2", "string3"])
+    Traceback (most recent call last):
+    TypeError: text must be a string
