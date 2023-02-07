@@ -14,11 +14,24 @@ Importing
 
 TESTS
 -----
+Ideal conditions
+----------------
+
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("Date", 14)
 
 Negative value
 --------------
 >>> bg = BaseGeometry()
 >>> bg.integer_validator("Date", -14)
+Traceback (most recent call last):
+ValueError: Date must be greater than 0
+
+Zero Value
+----------
+ 
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("Date", 0)
 Traceback (most recent call last):
 ValueError: Date must be greater than 0
 
@@ -54,3 +67,20 @@ TypeError: integer_validator() takes 3 positional arguments but 4 were given
 >>> bg.integer_validator()
 Traceback (most recent call last):
 TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+Handling Area Method
+====================
+
+Ideal conditions
+----------------
+
+>>> bg = BaseGeometry()
+>>> bg.area()
+Traceback (most recent call last):
+Exception: area() is not implemented
+
+Pass arguments to area method
+-----------------------------
+>>> bg.area(1)
+Traceback (most recent call last):
+TypeError: area() takes 1 positional argument but 2 were given
