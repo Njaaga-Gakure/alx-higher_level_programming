@@ -71,11 +71,11 @@ class Base:
         args:
             dictionary: attributes of the instance
         """
-        if dictionary and len(dictionary) != 0:
-            if cls == "Rectangle":
-                obj = cls(6, 7, 8)
+        if dictionary and dictionary != {}:
+            if cls.__name__ == "Rectangle":
+                obj = cls(6, 7)
             else:
-                obj = cls(5, 7, 9)
+                obj = cls(5)
             obj.update(**dictionary)
             return (obj)
 
